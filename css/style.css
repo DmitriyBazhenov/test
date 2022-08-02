@@ -28,7 +28,7 @@ header .header__menu_item {
   display: inline;
   list-style-type: none;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 150%;
 }
 header .main {
@@ -37,14 +37,14 @@ header .main {
   text-align: left;
   max-width: 213px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 150%;
 }
 header .main__footer {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-top: 810px;
+  margin-top: 750px;
   width: 50%;
   float: right;
 }
@@ -74,7 +74,7 @@ button {
   color: #fff;
   background: #D22020;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 150%;
 }
 .button__header:hover {
@@ -128,19 +128,6 @@ button {
   background: gold;
   color: #fff;
 }
-.button__contacts {
-  margin-top: 32px;
-  padding: 16px 32px;
-  background: #D22020;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 150%;
-  color: #FFFFFF;
-}
-.button__contacts:hover {
-  background: gold;
-  color: #fff;
-}
 .button__close {
   display: none;
 }
@@ -171,11 +158,14 @@ button {
   text-align: center;
 }
 .pf__item {
-  max-width: 675px;
+  max-width: 50%;
   margin-top: 27px;
 }
+.pf__item_about {
+  max-width: 570px;
+}
 .pf__item_bg {
-  width: 675px;
+  width: 570px;
   height: 513px;
   border-radius: 8px;
 }
@@ -384,6 +374,32 @@ button {
   min-height: 108px;
   width: 100%;
 }
+.contacts__form_btn {
+  border-radius: 50px;
+  border-color: #D22020;
+  background-color: #fff;
+  margin-top: 32px;
+  padding: 16px 32px;
+  background: #D22020;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 150%;
+  color: #FFFFFF;
+}
+.contacts__form_btn:hover {
+  background: gold;
+  color: #fff;
+}
+
+.inp {
+  font-size: 14px;
+}
+
+.message {
+  font-size: 20px;
+  color: red;
+  margin-top: 10px;
+}
 
 .footer__wrapp {
   text-align: center;
@@ -422,9 +438,6 @@ button {
   .pf #delete2 {
     display: none;
   }
-  .pf #delete3 {
-    display: none;
-  }
   .contacts__right {
     margin-right: 0;
   }
@@ -432,6 +445,13 @@ button {
     width: 100%;
   }
 }
+.pf__item_bg {
+  max-width: 515px;
+}
+.pf__item_about {
+  max-width: 515px;
+}
+
 @media (max-width: 1317px) {
   .about__descr {
     font-size: 25px;
@@ -447,6 +467,16 @@ button {
   }
   .about span {
     font-size: 19px;
+  }
+  .pf__item_bg {
+    max-width: 380px;
+    max-height: 400px;
+  }
+  .pf__item_about {
+    max-width: 380px;
+  }
+  .button__item {
+    transform: translate(10%, 1280%);
   }
 }
 @media (min-width: 868px) {

@@ -1,105 +1,39 @@
-const anchors = document.querySelectorAll('.scroll')
-const modal = document.querySelectorAll('.modal');
-const modalOpen = document.getElementById('burg');
-const modalClose = document.getElementById('close');
-const modalImg = document.getElementById('img');
-const btns = document.querySelectorAll('.sup');
-const over = document.getElementById('overlay');
-const imgClose = document.getElementById('btn-close')
+// const anchors = document.querySelectorAll('.scroll');
 
-// плавный скролл
 
-for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    closeModal();
-    const blockID = anchor.getAttribute('href').substr(1)
+// // плавный скролл
+
+// for (let anchor of anchors) {
+//   anchor.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     closeModal();
+//     const blockID = anchor.getAttribute('href').substr(1);
     
-    document.getElementById(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  })
-}
+//     document.getElementById(blockID).scrollIntoView({
+//       behavior: 'smooth',
+//       block: 'start'
+//     })
+//   })
+// }
 
-// модальное окно
+document.querySelectorAll('.scroll').forEach(link => {
 
-let scrollY = 0;
+  link.addEventListener('click', function(e) {
+      e.preventDefault();
+      closeModal();
 
-function openModal () {  
-  for(let i = 0; i < modal.length; i++) {
-    modal[i].classList.add('open')
-  }
-  for (let btn of btns) {
-    btn.classList.add('close');
-  }
-  modalOpen.classList.add('close');
-  const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-  const body = document.body;
-  body.style.position = 'fixed';
-  body.style.top = `-${scrollY}`;
-}
+      let href = this.getAttribute('href').substring(1);
 
-function closeModal () { 
-  for(let i = 0; i < modal.length; i++) {
-  modal[i].classList.remove('open')
-  }
-  for (let btn of btns) {
-    btn.classList.remove('close');
-  }
-  modalOpen.classList.remove('close');
-  const body = document.body;
-  const scrollY = body.style.top;
-  body.style.position = '';
-  body.style.top = '';
-  window.scrollTo(0, parseInt(scrollY || '0') * -1);
-}
+      const scrollTarget = document.getElementById(href);
 
-window.addEventListener('scroll', () => {
-   scrollY = document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+      // const topOffset = document.querySelector('.scrollto').offsetHeight;
+      const topOffset = 70; // если не нужен отступ сверху 
+      const elementPosition = scrollTarget.getBoundingClientRect().top;
+      const offsetPosition = elementPosition - topOffset;
+
+      window.scrollBy({
+          top: offsetPosition,
+          behavior: 'smooth'
+      });
+  });
 });
-
-modalOpen.addEventListener('click', function (e) {
-  openModal();
-  e.preventDefault();
-})
-
-modalClose.addEventListener('click', function (e) {
-  closeModal();
-  e.preventDefault();
-})
-
-window.addEventListener('resize',function(){
-  if (window.screen.width > 867) {
-    closeModal();
-  }
-});
-
-// октрытие фото
-
-img.addEventListener('click', function (e) {
-  img.classList.add('on')
-  over.classList.remove('close');
-  imgClose.classList.remove('close'); 
-  for (let mod of modal) {
-    mod.classList.add('close');
-  }
-})
-
-over.addEventListener('click', function (e) {
-  img.classList.remove('on')
-  over.classList.add('close');
-  imgClose.classList.add('close'); 
-  for (let mod of modal) {
-    mod.classList.remove('close');
-  }
-})
-
-imgClose.addEventListener('click', function (e) {
-  img.classList.remove('on')
-  over.classList.add('close');
-  imgClose.classList.add('close'); 
-  for (let mod of modal) {
-    mod.classList.remove('close');
-  }
-})

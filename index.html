@@ -11,7 +11,7 @@
     <title>Test</title>
 </head>
 <body>
-    <header id="header">
+    <header id="header" class="scrollto">
         <div class="header modal" id="modal">
             <div class="modal-wrap">
                 <a href="#header" class="logo scroll modal modal-header"><img src="icons/logo.png" alt="main_logo" class="header__logo"></a>
@@ -28,7 +28,7 @@
                     <li class="header__menu_item"><a class="scroll" href="#about">О компании</a></li>
                     <li class="header__menu_item"><a class="scroll" href="#contacts">Контакты</a></li>
                 </ul>
-                <a href="#contacts"><button class="button button__header scroll">Оставить заявку</button></a>
+                <a href="#form" class="scroll"><button class="button button__header">Оставить заявку</button></a>
             </div>
         </div>
         <div class="main">
@@ -46,7 +46,7 @@
     </header>
 
 
-    <div class="pf" id="pf">
+    <div class="pf" id="pf" class="scrollto">
         <div class="pf__wrapp">
             <div class="pf__main">Портфолио</div>
             <a href="#" class="pf__look">Смотреть все <img src="icons/right.svg" alt="right" class="pf__look_right"></a>
@@ -108,7 +108,7 @@
             <button class="button__pf">Все кейсы</button>
         </div>
     </div>
-    <div class="about" id="about">
+    <div class="about" id="about" class="scrollto">
         <div class="overlay close" id="overlay"></div>
         <div class="btn__close close" id="btn-close">&times;</div>
         <h2 class="about__header">О компании</h2>
@@ -147,7 +147,7 @@
         </div>
     </div>
 
-    <div class="contacts" id="contacts">
+    <div class="contacts" id="contacts" class="scrollto">
         <h2 class="contacts__header">Оставьте заявку</h2>
         <div class="contacts__wrapp">
             <div class="contacts__left">
@@ -158,14 +158,17 @@
                 </div>
             </div>
             <div class="contacts__right">
-                <form action="#" method="post" enctype="multipart/form-data" class="contacts__form">
-                    <p class="contacts__form_inscr">Ваше имя *</p>
-                    <input type="text" tabindex="1" required class="contacts__form_item" name="username"> <br>
-                    <p class="contacts__form_inscr">Телефон или мессенджер *</p>
-                    <input type="tel" tabindex="2" required class="contacts__form_item" name="phone"> <br>
-                    <p class="contacts__form_inscr">Краткое описание задачи *</p>
-                    <textarea name="description" tabindex="3" required class="contacts__form_descr"></textarea> <br>
-                    <button type="submit" class="button__contacts">Отправить</button>
+                <form action="#" class="contacts__form"  id="form">
+                    <p class="contacts__form_inscr" id="p-name">Ваше имя *</p>
+                    <input type="text" tabindex="1" class="contacts__form_item" name="username" id="username"> <br>
+                    <span class="message close"></span>
+                    <p class="contacts__form_inscr" id="p-phone">Телефон или мессенджер *</p>
+                    <input type="tel" tabindex="2" class="contacts__form_item" name="phone" id="phone"> <br>
+                    <span class="message close"></span>
+                    <p class="contacts__form_inscr" id="p-descr">Краткое описание задачи *</p>
+                    <textarea name="description" tabindex="3"  class="contacts__form_descr" id="descr"></textarea> <br>
+                    <span class="message close"></span> <br>
+                    <input type="submit" class="contacts__form_btn" id="form-btn"></input>
                 </form>
             </div>
         </div>
@@ -185,6 +188,8 @@
         </div>
         <div class="footer__logo"><a href="#header" class="footer__logotype scroll"><img src="icons/footer.svg" alt="icon" class="footer__icon"></a></div>
     </footer>
+    <script src="js/blocks/validate.js"></script>
+    <script src="js/blocks/modal.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

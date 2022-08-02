@@ -10,8 +10,8 @@
             display: none
         #delete2
             display: none
-        #delete3
-            display: none
+        // #delete3
+        //     display: none
     .contacts
         &__right
             margin-right: 0
@@ -19,8 +19,13 @@
             &_item
                 width: 100%
 
-@media (max-width: 1317px)
-
+@media (max-width: 1250px)
+.pf
+    &__item
+        &_bg
+            max-width: 515px
+        &_about
+            max-width: 515px
 
 @media (max-width: 1317px)
     .about
@@ -36,6 +41,15 @@
             font-size: 19px
         span 
             font-size: 19px
+    .pf
+        &__item
+            &_bg
+                max-width: 380px
+                max-height: 400px
+            &_about
+                max-width: 380px
+    .button__item
+        transform: translate(10%, 1280%)
 
 @media (min-width: 868px)
     .open
