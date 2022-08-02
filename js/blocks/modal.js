@@ -4,8 +4,10 @@ const modalClose = document.getElementById('close');
 const modalImg = document.getElementById('img');
 const btns = document.querySelectorAll('.sup');
 const over = document.getElementById('overlay');
-const imgClose = document.getElementById('btn-close')
-
+const imgClose = document.getElementById('btn-close');
+const header = document.getElementById('modal');
+const links = document.querySelectorAll('.header__menu_item');
+const linksMod = document.querySelectorAll('.modal-links');
 // модальное окно
 
 let scrollY = 0;
@@ -26,12 +28,13 @@ function openModal () {
 
 function closeModal () { 
   for(let i = 0; i < modal.length; i++) {
-  modal[i].classList.remove('open')
+  if (modal[i].classList.contains('open')) modal[i].classList.remove('open')
   }
   for (let btn of btns) {
-    btn.classList.remove('close');
+    if (btn.classList.contains('close')) btn.classList.remove('close');
   }
-  modalOpen.classList.remove('close');
+  
+  if (modalOpen.classList.contains('close')) modalOpen.classList.remove('close');
   const body = document.body;
   const scrollY = body.style.top;
   body.style.position = '';
@@ -58,6 +61,8 @@ window.addEventListener('resize',function(){
     closeModal();
   }
 });
+
+
 
 // октрытие фото
 
@@ -87,4 +92,3 @@ imgClose.addEventListener('click', function (e) {
     mod.classList.remove('close');
   }
 })
-
