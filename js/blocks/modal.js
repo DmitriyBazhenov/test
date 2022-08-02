@@ -87,3 +87,4 @@ imgClose.addEventListener('click', function (e) {
     mod.classList.remove('close');
   }
 })
+
