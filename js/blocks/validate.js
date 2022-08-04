@@ -8,10 +8,14 @@ const pPhone = document.getElementById('p-phone');
 const pDescr = document.getElementById('p-descr');
 let messages = document.querySelectorAll('.message');
 const reg = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
+const regName = /^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/u;
 
 function nameValid () {
   if (username.value == "") {
     messages[0].innerHTML = 'Введите Ваше Имя, пожалуйста';
+    messages[0].classList.remove('close');
+  } else if (!regName.test(username.value)) {
+    messages[0].innerHTML = 'Имя введено некорректно';
     messages[0].classList.remove('close');
   } else {
     messages[0].classList.add('close');
