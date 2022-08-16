@@ -1,5 +1,5 @@
 const sectionsArray = Array.from(document.querySelectorAll(".scrollTo"));
-const scrollToElems = document.querySelectorAll('.scroll')
+const scrollToElems = document.querySelectorAll('.scroll');
 
 scrollToElems.forEach(function (el) {
   el.addEventListener('click', function (e) {
