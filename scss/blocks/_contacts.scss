@@ -1,0 +1,139 @@
+.contacts {
+    margin: 34px 32px;
+    &__hr {
+      margin-top: 154px;
+      border: 1px solid #ACB5BD;
+    }
+    &__header {
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 130%;
+      color: #212529;
+    }
+    &__wrapp {
+      margin-top: 27px;
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: 867px) {
+        display: block;
+      }
+    }
+    &__left {
+      width: 30%;
+
+      @media (max-width: 867px) {
+        width: 100%;
+      }
+    }
+    &__julia {
+      &_photo {
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        background: url(/img/face.png) no-repeat center;
+        background-size: auto 300px;
+      }
+      &_name {
+        margin-top: 32px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 130%;
+        color: #212529;
+      }
+      &_descr {
+        margin-top: 6px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: #343A40;
+      }
+    }
+    &__briefing {
+      margin-top: 72px;
+      &_name {
+        margin-bottom: 17px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 130%;
+        color: #212529;
+      }
+      &_item {
+        margin-bottom: 8px;
+        padding-bottom: 5px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: #D22020;
+        border-bottom: 1px solid #D22020;
+        &:hover {
+          color: black;
+          border-bottom: none;
+        }
+      }
+    }
+    &__right {
+      width: 60%;
+      margin-right: 177px;
+      text-align: left;
+
+      @media (max-width: 1200px) {
+        margin-right: 0;
+      }
+
+      
+      @media (max-width: 867px) {
+        width: 100%;
+        margin-top: 32px;
+      }
+    }
+    &__form {
+      width: 100%;
+      &_inscr {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        color: #ACB5BD;
+      }
+      &_item {
+        min-height: 32px;
+        width: 562px;
+        border: none;
+        border-bottom: 1px solid #CED4DA;
+
+        @media (max-width: 1200px) {
+          width: 100%;
+        }
+      }
+      &_descr {
+        border: none;
+        border-bottom: 1px solid #CED4DA;
+        min-height: 108px;
+        width: 100%;
+      }
+      &_btn {
+        border-radius: 50px;
+        border-color: #D22020;
+        background-color: #fff;
+        margin-top: 32px;
+        padding: 16px 32px;
+        background: #D22020;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 150%;
+        color: #FFFFFF;
+        &:hover {
+          background: gold;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .inp {
+    font-size: 14px;
+  }
+  .message {
+    font-size: 20px;
+    color: red;
+    margin-top: 10px;
+  }

@@ -1,0 +1,103 @@
+header {
+    min-height: 1024px;
+    background: url(../img/main_bg.jpg) center (center/cover) no-repeat;
+    .header {
+      position: fixed;
+      top: 0;
+      min-width: 95%;
+      padding: 24px 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      border: none;
+      z-index: 5;
+
+      @media (max-width: 867px) {
+        display: block;
+      }
+      &__logo {
+        width: 100%;
+      }
+      &__menu {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+
+        @media (max-width: 867px) {
+          display: none;
+        }
+        &_list {
+          padding-top: 9px;
+
+          @media (max-width: 867px) {
+            padding-left: 10px;
+          }
+        }
+        &_item {
+          margin-right: 32px;
+          display: inline;
+          list-style-type: none;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 150%;
+
+          @media (max-width: 867px) {
+            padding-top: 25px;
+            padding-bottom: 25px;
+            font-size: 25px;
+            display: block;
+          }
+        }
+      }
+    }
+    .main {
+      padding-top: 75px;
+      text-align: left;
+      max-width: 213px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 150%;
+
+      @media (max-width: 867px) {
+        padding-top: 95px;
+          font-weight: 400;
+          font-size: 22px;
+          line-height: 150%;
+      }
+      &__footer {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-top: 750px;
+        width: 50%;
+        float: right;
+
+        @media (max-width: 867px) {
+          margin-top: 735px;
+        }
+        &_down {
+          display: block;
+          text-align: center;
+        }
+        &_link {
+          margin-right: 32px;
+          margin-left: 34px;
+
+          @media (max-width: 1200px) {
+            margin-right: 20px;
+            margin-left: 0px;
+          }
+        }
+        &_icon {
+          margin-right: 10px;
+          position: relative;
+          bottom: -3px;
+        }
+        &_text {
+          @media (max-width: 867px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }

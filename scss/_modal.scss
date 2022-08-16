@@ -1,0 +1,88 @@
+header {
+    .modal {
+      &__header {
+        &_hr {
+          border: 1px solid black;
+          width: 24px;
+          margin-top: 3px;
+        }
+        &_burg {
+          @media (min-width: 868px) {
+            display: none;
+          }
+        }
+        &_close {
+          @media (min-width: 868px) {
+            display: none;
+          }
+        }
+      }
+      &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 35px;
+      }
+      &-close {
+        display: none;
+        font-size: 45px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+      &-content {
+        text-align: left;
+      }
+    }
+    .open {
+      background-color: #fff;
+      display: block;
+      height: 100%;
+
+      @media (min-width: 868px) {
+        display: none;
+      }
+    }
+    .close {
+      display: none;
+    }
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+  }
+  .btn__close {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+  }
+  .close {
+    display: none;
+  }
+  .on {
+    top: 20%;
+    left: 20%;
+    max-width: 60%;
+    max-height: 60%;
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+      top: 25%;
+      left: 5%;
+      max-width: 90%;
+      max-height: 60%;
+    }
+  }

@@ -1,0 +1,57 @@
+button {
+  border-radius: 50px;
+  border-color: #D22020;
+  background-color: #fff;
+}
+.button {
+  &__header {
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    background: #D22020;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    &:hover {
+      background: gold;
+      color: red;
+    }
+
+    @media (max-width: 867px) {
+      display: none;
+    }
+  }
+  &__pf {
+    color: #D22020;
+    border-color: #D22020;
+    background: #fff;
+    border-radius: 56px;
+    padding: 16px 32px 16px 32px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto;
+    &:hover {
+      background: gold;
+      color: #fff;
+    }
+  }
+  &__about {
+    margin-top: 37px;
+    padding: 16px 32px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #D22020;
+    &:hover {
+      background: gold;
+      color: #fff;
+    }
+  }
+  &__close {
+    display: none;
+  }
+}
