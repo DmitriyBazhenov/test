@@ -15,6 +15,11 @@ header .header {
 }
 @media (max-width: 867px) {
   header .header {
+    padding: 24px 16px;
+  }
+}
+@media (max-width: 867px) {
+  header .header {
     display: block;
   }
 }
@@ -150,6 +155,11 @@ button {
   background: gold;
   color: #fff;
 }
+@media (max-width: 867px) {
+  .button__pf {
+    margin-top: 0;
+  }
+}
 .button__about {
   margin-top: 37px;
   padding: 16px 32px;
@@ -185,7 +195,11 @@ button {
 }
 @media (max-width: 867px) {
   .pf__wrapp {
-    display: block;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    margin: 0 auto;
   }
 }
 .pf__button {
@@ -233,6 +247,11 @@ button {
     max-width: 380px;
   }
 }
+@media (max-width: 867px) {
+  .pf__item_about {
+    margin: auto;
+  }
+}
 .pf__item_bg {
   width: 100%;
   height: 513px;
@@ -248,7 +267,8 @@ button {
 }
 @media (max-width: 867px) {
   .pf__item_bg {
-    width: 288px;
+    margin: auto;
+    max-height: 300px;
   }
 }
 .pf__item_name {
@@ -327,10 +347,20 @@ button {
     display: none;
   }
 }
+@media (max-width: 500px) {
+  .pf #delete3 {
+    display: none;
+  }
+}
 
 .about {
   min-height: 800px;
-  margin: 109px 32px;
+  margin-top: 109px;
+}
+@media (max-width: 867px) {
+  .about {
+    margin-top: 99px;
+  }
 }
 .about__header {
   font-weight: 600;
@@ -446,7 +476,7 @@ button {
 }
 
 .contacts {
-  margin: 34px 32px;
+  margin-top: 34px;
 }
 .contacts__hr {
   margin-top: 154px;
@@ -725,4 +755,9 @@ h1 {
   max-width: 1440px;
   margin: 0 auto;
   padding: 16px 32px;
+}
+@media (max-width: 867px) {
+  .container {
+    padding: 24px 16px;
+  }
 }

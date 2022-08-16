@@ -13,6 +13,10 @@ header {
       z-index: 5;
 
       @media (max-width: 867px) {
+        padding: 24px 16px;
+      }
+
+      @media (max-width: 867px) {
         display: block;
       }
       &__logo {

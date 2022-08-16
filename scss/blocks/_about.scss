@@ -1,6 +1,10 @@
 .about {
     min-height: 800px;
-    margin: 109px 32px;
+    margin-top: 109px;
+
+    @media (max-width: 867px) {
+      margin-top: 99px;
+    }
     &__header {
       font-weight: 600;
       font-size: 48px;

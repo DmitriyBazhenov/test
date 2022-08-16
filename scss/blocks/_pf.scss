@@ -15,7 +15,11 @@
       justify-items: center;
 
       @media (max-width: 867px) {
-        display: block;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+        display: grid;
+        margin: 0 auto;
       }
     }
     &__button {
@@ -52,11 +56,16 @@
     &__item {
       width: 80%;
       margin-top: 27px;
+
       &_about {
         max-width: 100%;
 
         @media (max-width: 1074px) {
           max-width: 380px;
+        }
+
+        @media (max-width: 867px) {
+          margin: auto;
         }
       }
       &_bg {
@@ -72,7 +81,8 @@
         }
 
         @media (max-width: 867px) {
-          width: 288px;
+          margin: auto;
+          max-height: 300px;
         }
       }
       &_name {
@@ -148,6 +158,12 @@
 
     @media (max-width: 867px) {
       #delete4 {
+        display: none;
+      }
+    }
+
+    @media (max-width: 500px) {
+      #delete3 {
         display: none;
       }
     }

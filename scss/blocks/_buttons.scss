@@ -37,6 +37,10 @@ button {
       background: gold;
       color: #fff;
     }
+
+    @media (max-width: 867px) {
+      margin-top: 0;
+    }
   }
   &__about {
     margin-top: 37px;
