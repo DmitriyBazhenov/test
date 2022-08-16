@@ -93,6 +93,10 @@
     }
     &__form {
       width: 100%;
+
+      @media (max-width: 867px) {
+        display: grid;
+      }
       &_inscr {
         font-weight: 400;
         font-size: 24px;
@@ -129,6 +133,10 @@
         &:hover {
           background: gold;
           color: #fff;
+        }
+
+        @media (max-width: 867px) {
+          margin: auto;
         }
       }
     }
