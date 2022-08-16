@@ -46,8 +46,6 @@ function closeModal () {
 
 window.addEventListener('scroll', () => {
    scrollY = document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
-   if (window.pageYOffset > 100) header.classList.add('white');
-    else header.classList.remove('white')
 
 });
 
