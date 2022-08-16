@@ -62,12 +62,15 @@ form.addEventListener ('submit', function (e) {
   nameValid();
   phoneValid();
   descrValid();
-  pName.classList.remove('inp');
-  pPhone.classList.remove('inp');
-  pDescr.classList.remove('inp');
+  
   e.preventDefault();
 
-  if (valid0 && valid1 && valid2) e.target.reset();
+  if (valid0 && valid1 && valid2) {
+    e.target.reset();
+    pName.classList.remove('inp');
+    pPhone.classList.remove('inp');
+    pDescr.classList.remove('inp');
+  }
 })
 
 username.addEventListener ('input', function (e) {

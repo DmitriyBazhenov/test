@@ -29,3 +29,9 @@ h1 {
     padding: 24px 16px;    
   }
 }
+
+.min {
+  @media (max-width: 867px) {
+    display: none;
+  }
+}
