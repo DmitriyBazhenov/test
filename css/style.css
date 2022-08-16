@@ -86,7 +86,7 @@ header .main__footer {
 }
 @media (max-width: 867px) {
   header .main__footer {
-    margin-top: 735px;
+    margin-top: 690px;
   }
 }
 header .main__footer_down {
@@ -481,6 +481,11 @@ button {
 .contacts__hr {
   margin-top: 154px;
   border: 1px solid #ACB5BD;
+}
+@media (max-width: 867px) {
+  .contacts__hr {
+    margin-top: 54px;
+  }
 }
 .contacts__header {
   font-weight: 600;

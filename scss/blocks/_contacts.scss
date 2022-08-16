@@ -3,6 +3,10 @@
     &__hr {
       margin-top: 154px;
       border: 1px solid #ACB5BD;
+
+      @media (max-width: 867px) {
+        margin-top: 54px;
+      }
     }
     &__header {
       font-weight: 600;
